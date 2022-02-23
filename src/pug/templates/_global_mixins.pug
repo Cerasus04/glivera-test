@@ -109,7 +109,7 @@ mixin breadcrumbs(array,add_class)
 //- works
 mixin menu(menuArray)
 	- gl_mod = menuArray.gl_mod || ''
-	ul(class=`${menuArray.gl_class}__list `)
+	ul(class=`${menuArray.gl_class}__list ${gl_mod ? `${menuArray.gl_class}__list--${gl_mod}` : ''}`)
 		each item in menuArray.items
 			- url = item.url || '#'
 			li(class= `${menuArray.gl_class}__item ${item.active ? `${menuArray.gl_class}__item--active_mod` : ''} ${gl_mod ? `${menuArray.gl_class}__item--${gl_mod}` : ''}`)

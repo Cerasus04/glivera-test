@@ -1,15 +1,19 @@
 //---------------------------------------------fonts
 $font_path: "../fonts/";
-$font_1: 'RobotoCondensed', sans-serif;
-$font_size_base: 1.6rem;
+$font_1: 'Roboto', 'Arial', sans-serif;
+$font_size_base: 1rem;
+$line_height: 1rem;
 //---------------------------------------------fonts###
 
 //---------------------------------------------colors
 $white: #fff;
 $black: #000;
 
-$color_text_base: $black;
-$color_link_base:#4aa3df;
+$color_text_base: #22252e;
+$color_text_inner: #323642;
+$color_link_base:#4cb649;
+$color_devider_base: #ebeced;
+$color_background_base: #f7f7f7;
 $body_bg: $white;
 //---------------------------------------------colors###
 
@@ -22,7 +26,7 @@ $z-index: (
 //---------------------------------------------z-index###
 
 //---------------------------------------------layout
-$page_width: 96rem;
+$page_width: 1200px;
 
 //---------------------------------------------layout###
 

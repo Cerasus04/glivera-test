@@ -1,0 +1,27 @@
+.nav {	
+	display: flex;
+	justify-content: space-between;
+	padding: 1.5rem 2rem;
+	background-color: $color_background_base;
+}
+.nav__block,
+.nav__list {
+	@include row;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.nav__block {
+	max-width: 70%;
+}
+.nav__descr {
+	margin-right: 2.4rem;
+}
+.nav__item:not(:last-child) {
+	padding-right: 1.4rem;
+}
+.nav__list--contact {
+	justify-content: flex-end;
+}
+.nav__link--contact {
+	color: $color_text_inner;
+}

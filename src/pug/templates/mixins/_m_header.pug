@@ -1,2 +1,55 @@
 mixin header
 	header.header
+		.header__wrap
+			.section_in
+				nav.nav
+					.nav__block
+						p.nav__descr Tags:
+						+menu({
+							gl_class: 'nav',
+							gl_mod: 'tags',
+							items: [
+								{
+								'url' : '#',
+								'title' : 'bitcoin'
+								},
+								{
+								'url' : '#',
+								'title' : 'bittorent'
+								},
+								{
+								'url' : '#',
+								'title' : 'irc'
+								},
+								{
+								'url' : '#',
+								'title' : 'news'
+								},
+								{
+								'url' : '#',
+								'title' : 'privacy'
+								},
+								{
+								'url' : '#',
+								'title' : 'programming'
+								},
+								{
+								'url' : '#',
+								'title' : 'security'
+								}]
+						})
+					+menu({
+						gl_class: 'nav',
+						gl_mod: 'contact',
+						items: [
+							{
+							'url' : '#',
+							'title' : 'team'
+							},
+							{
+							'url' : '#',
+							'title' : 'contact'
+							}]
+					})
+					
+						

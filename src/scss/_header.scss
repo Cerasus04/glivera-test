@@ -1,17 +1,12 @@
 //------------------------------------------------------------layout
 .header {
-	position: fixed;
-	top: 0;
-	left: 0;
-
-	height: var(--height-header);
-	width: 100%;
-
-	font-size: 1rem;
-
+	font-size: 0.87rem;
 	will-change: transform;
-
+	text-transform: uppercase;
 	@include z-index(header);
+}
+.header__wrap {
+	margin: 2.6rem 0;
 }
 
 //------------------------------------------------------------layout###

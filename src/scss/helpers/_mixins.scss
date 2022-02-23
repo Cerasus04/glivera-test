@@ -194,3 +194,16 @@
 		background: $color;
 	}
 }
+
+@mixin word-break {
+	display: -webkit-box;
+	word-wrap: break-word;
+	word-break: break-word;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+}
+@mixin row {
+	display: flex;
+	flex-wrap: wrap;	
+}
