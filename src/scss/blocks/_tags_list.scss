@@ -1,0 +1,25 @@
+.tags_list {
+	@include row;
+	margin-bottom: 0.7rem;
+}
+.tags_list__item {
+	padding-right: .5rem;
+}
+.tags_list__link {
+	font-size: 0.8rem;
+	position: relative;
+	text-transform: uppercase;	
+}
+.tags_list__link::after {
+	content: ",";
+	position: absolute;
+	bottom: -3px;
+	right: -3px;
+	color: $color_link_base;
+	font-size: inherit;
+}
+.tags_list__item:last-of-type {
+	& .tags_list__link::after {
+		content: unset;
+	}
+}

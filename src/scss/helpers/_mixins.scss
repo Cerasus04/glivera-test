@@ -196,7 +196,7 @@
 }
 
 @mixin word-break {
-	display: -webkit-box;
+	display: block;
 	word-wrap: break-word;
 	word-break: break-word;
 	-webkit-line-clamp: 2;

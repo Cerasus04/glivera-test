@@ -170,11 +170,11 @@ mixin picture(data)
 		each imgType in mediaArray
 			if media
 				if imgType === 'webp' && environment === 'production'
-					source(media=`(min-width: ${media}px)` srcset=`${assetsImage}${data.img}.${type}.${imgType}${is2x ? `, ${data.img}@2x.${type}.${imgType} 2x` : ''}` type=`image/${imgType}`)
-					source(media=`(max-width: ${media - 1}px)` srcset=`${assetsImage}${data.img_mob}.${type}.${imgType}${is2x ? `, ${data.img_mob}@2x.${type}.${imgType} 2x` : ''}` type=`image/${imgType}`)
+					source(media=`(min-width: ${media}px)` srcset=`${assetsImage}${data.img}.${type}.${imgType}${is2x ? `, ${assetsImage}${data.img}@2x.${type}.${imgType} 2x` : ''}` type=`image/${imgType}`)
+					source(media=`(max-width: ${media - 1}px)` srcset=`${assetsImage}${data.img_mob}.${type}.${imgType}${is2x ? `, ${assetsImage}${data.img_mob}@2x.${type}.${imgType} 2x` : ''}` type=`image/${imgType}`)
 				else
-					source(media=`(min-width: ${media}px)` srcset=`${assetsImage}${data.img}.${imgType}${is2x ? `, ${data.img}@2x.${imgType} 2x` : ''}` type=`image/${imgType}`)
-					source(media=`(max-width: ${media - 1}px)` srcset=`${assetsImage}${data.img_mob}.${imgType}${is2x ? `${data.img_mob}@2x.${imgType} 2x` : ''}` type=`image/${imgType}`)
+					source(media=`(min-width: ${media}px)` srcset=`${assetsImage}${data.img}.${imgType}${is2x ? `, ${assetsImage}${data.img}@2x.${imgType} 2x` : ''}` type=`image/${imgType}`)
+					source(media=`(max-width: ${media - 1}px)` srcset=`${assetsImage}${data.img_mob}.${imgType}${is2x ? `, ${assetsImage}${data.img_mob}@2x.${imgType} 2x` : ''}` type=`image/${imgType}`)
 			else
 				if imgType === 'webp' && environment === 'production'
 					source(srcset=`${assetsImage}${data.img}.${type}.${imgType}${is2x ? `, ${data.img}@2x.${type}.${imgType} 2x` : ''}` type=`image/${imgType}`)
@@ -182,3 +182,12 @@ mixin picture(data)
 					source(srcset=`${assetsImage}${data.img}.${imgType}${is2x ? `, ${data.img}@2x.${imgType} 2x` : ''}` type=`image/${imgType}`)
 		img(class= customClass src=`${assetsImage}${data.img}.${type}` alt="")
 
+//- ico-svg
+
+mixin ico_svg(params)
+	- icon = params.icon;
+	- size = params.size || 'sm';
+	- theme = params.theme || 'inherit';
+
+	svg(viewBox='0 0 24 24', class=`ico_svg ico_svg--${size} ico_svg--${theme}`)&attributes(attributes)
+		path(fill='currentColor' d=icon)

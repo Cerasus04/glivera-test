@@ -9,3 +9,24 @@
 		height: 100%;
 	}
 }
+// Mixin size icons
+
+@mixin size($size) {
+	width: $size;
+	height: $size;
+}
+
+$sm-ico: 14px;
+
+.ico_svg {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+
+	&--sm {
+		@include size($sm-ico);
+	}
+	&--inherit {
+		color: inherit;
+	}
+}

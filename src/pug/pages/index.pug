@@ -1,7 +1,213 @@
 extends ../layout/_layout
-
+ 
 block vars
 	- array = {body_class:'page', layout_mod:'', sub_keywords:'', title_inner:'Blogs'}
 block content_block
-	section.section.demo_mod
+	h1.visually-hidden Blogs
+	.section_in.main__wrap
+		section.posts
+			h2.posts__title Recent Posts
+			ul.posts__list
+				li.posts__item
+					+post_card({
+						picture : {
+							typeJpeg: false,
+							png: false,
+							media: 1024,
+							is2x: true,
+							contain: true,
+							class: false,
+							img: `post-1`,
+							img_mob: `post-1`
+						},
+						title : 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
+						href : '#',
+						author : 'Derek Zimmer',
+						date : 'JUL 25, 2018',
+						tags : [ 
+							{
+								'link': 'Governments', 
+								'href': '#'
+							},{
+								'link': 'Networking', 
+								'href': '#'
+							},{
+								'link': 'Open Source',
+								'href': '#'
+							},{
+								'link': 'Privacy', 
+								'href': '#'
+							},{
+								'link': 'Security',
+								'href': '#'
+							}
+						],
+						commit : '#',
+						count: '0',
+						ico: {
+							'icon': 'M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2M20 16H5.2L4 17.2V4H20V16Z'}
+					})
+				li.posts__item
+					+post_card({
+						picture : {
+							typeJpeg: false,
+							png: false,
+							media: 1024,
+							is2x: true,
+							contain: true,
+							class: false,
+							img: `post-2`,
+							img_mob: `post-2`
+						},
+						title : 'How to get cheaper flights using a VPN',
+						href : '#',
+						author : 'Jayson',
+						date : 'JUL 24, 2018',
+						tags : [ 
+							{
+								'link': 'Guides', 
+								'href': '#'
+							}
+						],
+						commit : '#',
+						count: '0',
+						ico: {
+							'icon': 'M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2M20 16H5.2L4 17.2V4H20V16Z'}
+					})
+				li.posts__item
+					+post_card({
+						picture : {
+							typeJpeg: false,
+							png: false,
+							media: 1024,
+							is2x: true,
+							contain: true,
+							class: false,
+							img: `post-3`,
+							img_mob: `post-3`
+						},
+						title : 'Net Neutrality was repealed, but the fight is far from over',
+						href : '#',
+						author : 'Chris Miller',
+						date : 'JUL 22, 2018',
+						tags : [ 
+							{
+								'link': 'Governments', 
+								'href': '#'
+							},{
+								'link': 'Net neutrality', 
+								'href': '#'
+							},{
+								'link': 'New',
+								'href': '#'
+							}
+						],
+						commit : '#',
+						count: '0',
+						ico: {
+							'icon': 'M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2M20 16H5.2L4 17.2V4H20V16Z'}
+					})
+				li.posts__item
+					+post_card({
+						picture : {
+							typeJpeg: false,
+							png: false,
+							media: 1024,
+							is2x: true,
+							contain: true,
+							class: false,
+							img: `post-1`,
+							img_mob: `post-1`
+						},
+						title : 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
+						href : '#',
+						author : 'Derek Zimmer',
+						date : 'JUL 25, 2018',
+						tags : [ 
+							{
+								'link': 'Governments', 
+								'href': '#'
+							},{
+								'link': 'Networking', 
+								'href': '#'
+							},{
+								'link': 'Open Source',
+								'href': '#'
+							},{
+								'link': 'Privacy', 
+								'href': '#'
+							},{
+								'link': 'Security',
+								'href': '#'
+							}
+						],
+						commit : '#',
+						count: '0',
+						ico: {
+							'icon': 'M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2M20 16H5.2L4 17.2V4H20V16Z'}
+					})
+				li.posts__item
+					+post_card({
+						picture : {
+							typeJpeg: false,
+							png: false,
+							media: 1024,
+							is2x: true,
+							contain: true,
+							class: false,
+							img: `post-2`,
+							img_mob: `post-2`
+						},
+						title : 'How to get cheaper flights using a VPN',
+						href : '#',
+						author : 'Jayson',
+						date : 'JUL 24, 2018',
+						tags : [ 
+							{
+								'link': 'Guides', 
+								'href': '#'
+							}
+						],
+						commit : '#',
+						count: '0',
+						ico: {
+							'icon': 'M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2M20 16H5.2L4 17.2V4H20V16Z'}
+					})
+				li.posts__item
+					+post_card({
+						picture : {
+							typeJpeg: false,
+							png: false,
+							media: 1024,
+							is2x: true,
+							contain: true,
+							class: false,
+							img: `post-3`,
+							img_mob: `post-3`
+						},
+						title : 'Net Neutrality was repealed, but the fight is far from over',
+						href : '#',
+						author : 'Chris Miller',
+						date : 'JUL 22, 2018',
+						tags : [ 
+							{
+								'link': 'Governments', 
+								'href': '#'
+							},{
+								'link': 'Net neutrality', 
+								'href': '#'
+							},{
+								'link': 'New',
+								'href': '#'
+							}
+						],
+						commit : '#',
+						count: '0',
+						ico: {
+							'icon': 'M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2M20 16H5.2L4 17.2V4H20V16Z'}
+					})
+				
+		aside.info
+			h2.visually-hidden Information
+
 		

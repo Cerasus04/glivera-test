@@ -1,0 +1,26 @@
+mixin post_card(params)
+	- picture = params.picture;
+	- title = params.title;
+	- href = params.href;
+	- author = params.author;
+	- date = params.date;
+	- tags = params.tags;
+	- commit = params.commit;
+	- count = params.count; 
+	- ico = params.ico;
+
+	article.post&attributes(attributes)
+		a.post__link(href=href)
+			+picture(picture)
+		.post__descr 
+			a(href=href).post__title #{title}
+			.post__info
+				p.post__author #{author}
+				p.post__date #{date}
+			+tags_list(tags)
+			a(href=commit).post__commit
+				span.post__count #{count}
+				span.post__icon
+					+ico_svg(ico)
+				
+				

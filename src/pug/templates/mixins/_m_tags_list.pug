@@ -1,0 +1,5 @@
+mixin tags_list(params)
+	ul.tags_list&attributes(attributes)
+		each item in params
+			li.tags_list__item
+				a.tags_list__link(href=item.href) #{item.link}

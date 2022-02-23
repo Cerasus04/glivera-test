@@ -17,10 +17,7 @@ const message = 'Developed by Glivera-team https://glivera-team.com/';
 console.info('%c%s', styles, message);
 
 // -------------------  dev widget
-if (GLOBAL_VARS.projectDevStatus) {
-	pageWidgetInit();
-	console.log(process.env.NODE_ENV);
-}
+
 // -------------------  dev widget###
 
 // -------------------  global variables

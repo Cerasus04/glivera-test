@@ -1,0 +1,27 @@
+.posts {
+	width: 50rem;
+}
+.posts__title {
+	margin-bottom: .5rem;
+  font-weight: 300;
+  font-size: 2rem;
+	color: $color-text-base;
+	line-height: 2.75rem;
+
+  @include bp($point_2, min) {
+    // margin-bottom: 2.5rem;
+  }
+
+  @include bp($point_1, min) {
+    // margin-bottom: 4rem;
+    // font-size: 3.2rem;
+  }
+}
+.posts__list {
+	padding-right: 2.75rem;
+}
+.posts__item {
+	padding-top: 1.5rem;
+	padding-bottom: 3.8rem;
+	border-bottom: 1px solid $color_devider_base;
+}
