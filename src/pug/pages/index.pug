@@ -206,8 +206,69 @@ block content_block
 						ico: {
 							'icon': 'M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2M20 16H5.2L4 17.2V4H20V16Z'}
 					})
-				
+			.posts__btn
+				+button({
+					'text': 'older posts',
+					'ariaLabel': 'views old posts'
+				})
 		aside.info
 			h2.visually-hidden Information
+			+form_input({				
+				blockClass: 'form_search',
+				label : true,
+				labelClass : 'visually-hidden',
+				labelText : 'search info',
+				inputType: 'search',
+				elClass: 'form_search__input',
+				id : 'form_search',
+				value : 'Search blog',
+				name : 'search_input'
+			})
+			+info_block({
+				title: 'Announcements',
+				icon: {name : 'shape', mod: ''},
+				list: {
+					listArr : [{
+						'link' : 'Upcoming Changes (Live Chat, Less Censorship, More Access)',
+						'href' : '#'
+					},{
+						'link' : 'New Servers (US Washington DC)',
+						'href' : '#'
+					},{
+						'link' : 'New Servers (US Denver)',
+						'href' : '#'
+					},{
+						'link' : 'Open Source: Releasing the PIA iOS Client',
+						'href' : '#'
+					},{
+						'link' : 'Opera Extension is now available',
+						'href' : '#'
+					}]
+				}
+			})
+			+info_block({
+				title: 'Popular posts',
+				icon: {name: 'wi-fi', mod : ''},
+				list: {
+					listArr : [{
+						'link' : 'The Gift of Privacy',
+						'href' : '#'
+					},{
+						'link' : 'UK High Court Censors Many Links To Popcorn Time: Useless, Dangerous Gesture',
+						'href' : '#'
+					},{
+						'link' : 'About the PIA Client Security and VPN Security in General',
+						'href' : '#'
+					},{
+						'link' : 'A Private Net Is Just As Fundamental A Right As Freedom Of Speech',
+						'href' : '#'
+					},{
+						'link' : 'Wiretapping Today Just Doesn’t Mean What The Word Meant In The 1990s, So Don’t Fall For That Lie',
+						'href' : '#'
+					}]
+				}
+			})
+			
+				
 
 		

@@ -1,0 +1,9 @@
+mixin button(params)
+	- size = params.size || 'normal';
+	- theme = params.theme || 'primary';
+	- type = params.type || 'button';
+	- text = params.text || ''
+	- ariaLabel = params.ariaLabel;
+
+	button(class=`btn btn--${size} btn--${theme}` aria-label=ariaLabel type=type)&attributes(attributes) #{text}
+		block

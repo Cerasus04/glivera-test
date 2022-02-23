@@ -196,10 +196,10 @@
 }
 
 @mixin word-break {
-	display: block;
+	display: -webkit-box;
 	word-wrap: break-word;
 	word-break: break-word;
-	-webkit-line-clamp: 2;
+	-webkit-line-clamp: 3;
 	overflow: hidden;
 	-webkit-box-orient: vertical;
 }

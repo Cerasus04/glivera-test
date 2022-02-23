@@ -32,15 +32,23 @@ mixin head(array)
 //- form element v3
 
 mixin form_input(data)
-	- labelClass = data.label_class || 'form_input__label'
+	- labelClass = data.labelClass || 'form_input__label'
+	- label = data.label
 	- elClass = data.class || 'form_input__element'
-	- blockClass = data.block_class || 'form_input'
-	- fieldClass = data.field_class || 'form_input__field'
+	- blockClass = data.block_class || 'form_input'	
+	- label = data.label
+	- labelText = data.label
+	- id = data.id
+	- inputType = data.type
+	- placeholder = data.placeholder || false
+	- value = data.value || false
+	- name = data.name || false
+	- required = data.required || false
+
 	div(class = blockClass)
-		if data.label
-			label(for=data.id class= labelClass)= data.label
-		div(class = fieldClass)
-			input(type=data.type class = elClass placeholder=data.placeholder value=data.value name=data.name required=data.required)
+		if label
+			label(for=id class=labelClass) #{labelText}
+			input(type=inputType class = elClass id=id placeholder=placeholder value=value name=name required=required)
 			block
 
 mixin form_textarea(data)
@@ -126,8 +134,10 @@ mixin social(socialArray)
 					+icon(item.name_icon, item.mod_icon)
 
 //- works
-mixin icon(name, mod)
-	- mod = mod || ''
+mixin icon(params)
+	- name = params.name
+	- mod = params.mod || ''
+	
 	svg(class=`icon icon_${name} ${mod}`)
 		use(xlink:href=`${assetsImage}sprite/sprite.svg#${name}`)
 
@@ -191,3 +201,12 @@ mixin ico_svg(params)
 
 	svg(viewBox='0 0 24 24', class=`ico_svg ico_svg--${size} ico_svg--${theme}`)&attributes(attributes)
 		path(fill='currentColor' d=icon)
+
+mixin list(params)
+	- list_mod = params.list_mod || ''
+	ul(class=`list ${list_mod ? `list--${list_mod}` : ''}`)
+		each item in params.listArr
+			- href = item.href || '#'
+			- link = item.link
+			li(class= `list__item ${item.active ? `list__item--active_mod` : ''}`)
+				a(href=href class= `list__link`) #{link}
