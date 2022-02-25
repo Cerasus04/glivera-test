@@ -6,7 +6,7 @@ block content_block
 	h1.visually-hidden Blogs
 	.section_in.main__wrap
 		section.posts
-			h2.posts__title Recent Posts
+			h2.posts__title Recent posts
 			ul.posts__list
 				li.posts__item
 					+post_card({
@@ -211,7 +211,7 @@ block content_block
 					'text': 'older posts',
 					'ariaLabel': 'views old posts'
 				})
-		aside.info
+		section.info
 			h2.visually-hidden Information
 			+form_input({				
 				blockClass: 'form_search',
@@ -224,33 +224,34 @@ block content_block
 				value : 'Search blog',
 				name : 'search_input'
 			})
+				//- +icon({name: 'search', mod : ''})
 			+info_block({
 				title: 'Announcements',
 				icon: {name : 'shape', mod: ''},
-				list: {
-					listArr : [{
-						'link' : 'Upcoming Changes (Live Chat, Less Censorship, More Access)',
-						'href' : '#'
-					},{
-						'link' : 'New Servers (US Washington DC)',
-						'href' : '#'
-					},{
-						'link' : 'New Servers (US Denver)',
-						'href' : '#'
-					},{
-						'link' : 'Open Source: Releasing the PIA iOS Client',
-						'href' : '#'
-					},{
-						'link' : 'Opera Extension is now available',
-						'href' : '#'
-					}]
-				}
+				list_mod: 'info', 
+				listArr : [{
+					'link' : 'Upcoming Changes (Live Chat, Less Censorship, More Access)',
+					'href' : '#'
+				},{
+					'link' : 'New Servers (US Washington DC)',
+					'href' : '#'
+				},{
+					'link' : 'New Servers (US Denver)',
+					'href' : '#'
+				},{
+					'link' : 'Open Source: Releasing the PIA iOS Client',
+					'href' : '#'
+				},{
+					'link' : 'Opera Extension is now available',
+					'href' : '#'
+				}]				
 			})
 			+info_block({
 				title: 'Popular posts',
 				icon: {name: 'wi-fi', mod : ''},
-				list: {
-					listArr : [{
+				list_mod: 'info', 
+				listArr: [
+					{
 						'link' : 'The Gift of Privacy',
 						'href' : '#'
 					},{
@@ -265,9 +266,21 @@ block content_block
 					},{
 						'link' : 'Wiretapping Today Just Doesn’t Mean What The Word Meant In The 1990s, So Don’t Fall For That Lie',
 						'href' : '#'
-					}]
-				}
+					}
+				]						
 			})
+			aside.advert
+				.advert__img
+					+picture({
+						typeJpeg: false,
+						png: false,
+						media: 1024,
+						is2x: true,
+						contain: true,
+						class: false,
+						img: `aside`,
+						img_mob: `aside`
+					})
 			
 				
 

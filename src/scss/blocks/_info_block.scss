@@ -1,0 +1,36 @@
+.info_block {
+	padding-top: 2.6rem;
+}
+.info_block__icon {
+	width: 42px;
+	height: 42px;
+}
+.info_block__title {
+	@extend %global_flex_block_row_nowrap_flex-start_center; 
+	padding-left: 1rem; 
+}
+.info_block__title_text {
+	@include word-break;	
+  width: 100%;
+	padding-left: 1.87rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 300;
+  color: $color-text-base;
+  transition: opacity, .25s ease;
+
+  &:hover,
+	&:focus  {
+    opacity: .7;
+    text-decoration: none;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  @include bp($point_1, min) {
+    //font-size: 2.4rem;
+    //line-height: 3.2rem;
+  }
+}

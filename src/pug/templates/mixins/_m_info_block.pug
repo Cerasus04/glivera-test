@@ -6,9 +6,10 @@ mixin info_block(params)
 
 	.info_block
 		.info_block__title
-			+icon(icon)
+			.info_block__icon
+				+icon(icon)
 			h3.info_block__title_text #{title}
-		+list(list)
+		+list(params)
 
 				
 				

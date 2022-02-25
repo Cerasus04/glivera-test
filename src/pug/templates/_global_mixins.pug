@@ -48,8 +48,7 @@ mixin form_input(data)
 	div(class = blockClass)
 		if label
 			label(for=id class=labelClass) #{labelText}
-			input(type=inputType class = elClass id=id placeholder=placeholder value=value name=name required=required)
-			block
+		input(type=inputType class = elClass id=id placeholder=placeholder value=value name=name required=required)
 
 mixin form_textarea(data)
 	- labelClass = data.label_class || 'form_textarea__label'
@@ -203,7 +202,7 @@ mixin ico_svg(params)
 		path(fill='currentColor' d=icon)
 
 mixin list(params)
-	- list_mod = params.list_mod || ''
+	- list_mod = params.list_mod
 	ul(class=`list ${list_mod ? `list--${list_mod}` : ''}`)
 		each item in params.listArr
 			- href = item.href || '#'

@@ -14,10 +14,15 @@
 	max-width: 70%;
 }
 .nav__descr {
-	margin-right: 2.4rem;
+	margin-right: 2.8rem;
 }
 .nav__item:not(:last-child) {
-	padding-right: 1.4rem;
+	padding-right: 2.4rem;
+}
+.nav__link--tags:focus,
+.nav__link--tags:hover {
+	color: $color_link_hover;
+
 }
 .nav__list--contact {
 	justify-content: flex-end;

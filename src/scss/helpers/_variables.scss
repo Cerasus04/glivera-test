@@ -13,6 +13,7 @@ $black: #000;
 $color_text_base: #22252e;
 $color_text_inner: #323642;
 $color_link_base:#4cb649;
+$color_link_hover: #f7f312;
 $color_devider_base: #ebeced;
 $color_background_base: #f7f7f7;
 $color_text_light: #889099;
@@ -48,8 +49,8 @@ $point_8: 320px;
 //---------------------------------------------media points
 
 //---------------------------------------------forms
-$input_height: 4rem;
-$input_offset: 0 2rem;
+// $input_height: 4rem;
+$input_offset: 1.1rem 1.5rem 1.2rem 4rem;
 $input_font_size: $font_size_base;
 $input_border_color: #ccc;
 $input_border_color_active: $black;

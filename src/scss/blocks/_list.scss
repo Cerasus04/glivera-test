@@ -1,0 +1,30 @@
+.list--info {
+	padding: 1.7rem 0 0.7rem;
+	border-bottom: 1px solid $color_devider_base;
+
+	.list__item {
+		position: relative;
+		padding-left: 0.6rem;
+		margin-bottom: 1rem;
+
+		&:before {
+			position: absolute;
+			left: 2px;
+			top: 11px;
+			display: block;
+			content: "";	
+			width: 3px;
+			height: 3px;
+			border-radius: 50%;
+			background-color: $color_link_base;
+		}		
+	}
+	.list__link {
+		font-size: 1rem;
+		line-height: 1.4rem;
+		letter-spacing: -1px;
+		text-align: left;
+		color: $color_text_inner;
+	}
+}
+
