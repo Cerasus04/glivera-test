@@ -6,7 +6,7 @@
 		position: relative;
 		padding-left: 0.6rem;
 		margin-bottom: 1rem;
-
+		
 		&:before {
 			position: absolute;
 			left: 2px;
@@ -24,7 +24,8 @@
 		line-height: 1.4rem;
 		letter-spacing: -1px;
 		text-align: left;
-		color: $color_text_inner;
+		// color: $color_text_inner;
+		color: $color_text_light;
 	}
 }
 

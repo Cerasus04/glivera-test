@@ -1,7 +1,7 @@
 extends ../layout/_layout
  
 block vars
-	- array = {body_class:'page', layout_mod:'', sub_keywords:'', title_inner:'Blogs'}
+	- array = {body_class:'page', layout_mod:'', sub_keywords:'', title_inner:'Test'}
 block content_block
 	h1.visually-hidden Blogs
 	.section_in.main__wrap
@@ -211,64 +211,65 @@ block content_block
 					'text': 'older posts',
 					'ariaLabel': 'views old posts'
 				})
+		+form_input({				
+			blockClass: 'form_search',
+			label : true,
+			labelClass : 'visually-hidden',
+			labelText : 'search info',
+			inputType: 'search',
+			elClass: 'form_search__input',
+			id : 'form_search',
+			value : 'Search blog',
+			name : 'search_input'
+		})
+			+icon({name: 'search', mod : ''})
 		section.info
 			h2.visually-hidden Information
-			+form_input({				
-				blockClass: 'form_search',
-				label : true,
-				labelClass : 'visually-hidden',
-				labelText : 'search info',
-				inputType: 'search',
-				elClass: 'form_search__input',
-				id : 'form_search',
-				value : 'Search blog',
-				name : 'search_input'
-			})
-				//- +icon({name: 'search', mod : ''})
-			+info_block({
-				title: 'Announcements',
-				icon: {name : 'shape', mod: ''},
-				list_mod: 'info', 
-				listArr : [{
-					'link' : 'Upcoming Changes (Live Chat, Less Censorship, More Access)',
-					'href' : '#'
-				},{
-					'link' : 'New Servers (US Washington DC)',
-					'href' : '#'
-				},{
-					'link' : 'New Servers (US Denver)',
-					'href' : '#'
-				},{
-					'link' : 'Open Source: Releasing the PIA iOS Client',
-					'href' : '#'
-				},{
-					'link' : 'Opera Extension is now available',
-					'href' : '#'
-				}]				
-			})
-			+info_block({
-				title: 'Popular posts',
-				icon: {name: 'wi-fi', mod : ''},
-				list_mod: 'info', 
-				listArr: [
-					{
-						'link' : 'The Gift of Privacy',
+			.info__block 			
+				+info_block({
+					title: 'Announcements',
+					icon: {name : 'shape', mod: ''},
+					list_mod: 'info', 
+					listArr : [{
+						'link' : 'Upcoming Changes (Live Chat, Less Censorship, More Access)',
 						'href' : '#'
 					},{
-						'link' : 'UK High Court Censors Many Links To Popcorn Time: Useless, Dangerous Gesture',
+						'link' : 'New Servers (US Washington DC)',
 						'href' : '#'
 					},{
-						'link' : 'About the PIA Client Security and VPN Security in General',
+						'link' : 'New Servers (US Denver)',
 						'href' : '#'
 					},{
-						'link' : 'A Private Net Is Just As Fundamental A Right As Freedom Of Speech',
+						'link' : 'Open Source: Releasing the PIA iOS Client',
 						'href' : '#'
 					},{
-						'link' : 'Wiretapping Today Just Doesn’t Mean What The Word Meant In The 1990s, So Don’t Fall For That Lie',
+						'link' : 'Opera Extension is now available',
 						'href' : '#'
-					}
-				]						
-			})
+					}]				
+				})
+				+info_block({
+					title: 'Popular posts',
+					icon: {name: 'wi-fi', mod : ''},
+					list_mod: 'info', 
+					listArr: [
+						{
+							'link' : 'The Gift of Privacy',
+							'href' : '#'
+						},{
+							'link' : 'UK High Court Censors Many Links To Popcorn Time: Useless, Dangerous Gesture',
+							'href' : '#'
+						},{
+							'link' : 'About the PIA Client Security and VPN Security in General',
+							'href' : '#'
+						},{
+							'link' : 'A Private Net Is Just As Fundamental A Right As Freedom Of Speech',
+							'href' : '#'
+						},{
+							'link' : 'Wiretapping Today Just Doesn’t Mean What The Word Meant In The 1990s, So Don’t Fall For That Lie',
+							'href' : '#'
+						}
+					]						
+				})
 			aside.advert
 				.advert__img
 					+picture({
@@ -281,7 +282,212 @@ block content_block
 						img: `aside`,
 						img_mob: `aside`
 					})
-			
-				
-
-		
+			section.tag_cloud
+				h2.tag_cloud__title Tag cloud				
+				+tagcloud([
+					{
+						href: '#',
+						rel: '1',
+						tagcloud: 'mass'
+					},{
+						href: '#',
+						rel: '1',
+						tagcloud: 'surveillance'
+					},{
+						href: '#',
+						rel: '1',
+						tagcloud: 'internet'
+					},{
+						href: '#',
+						rel: '1',
+						tagcloud: 'privacy'
+					},{
+						href: '#',
+						rel: '4',
+						tagcloud: 'china'
+					},{
+						href: '#',
+						rel: '0.2',
+						tagcloud: 'whatsapp'
+					},{
+						href: '#',
+						rel: '0.2',
+						tagcloud: 'police'
+					},{
+						href: '#',
+						rel: '0.2',
+						tagcloud: 'dna'
+					},{
+						href: '#',
+						rel: '2',
+						tagcloud: 'nsa'
+					},{
+						href: '#',
+						rel: '1',
+						tagcloud: 'russia'
+					},{
+						href: '#',
+						rel: '0.1',
+						tagcloud: 'gchq'
+					},{
+						href: '#',
+						rel: '1',
+						tagcloud: 'internet'
+					},{
+						href: '#',
+						rel: '1',
+						tagcloud: 'censorship'
+					},{
+						href: '#',
+						rel: '1',
+						tagcloud: 'facial'
+					},{
+						href: '#',
+						rel: '1',
+						tagcloud: 'recognition'
+					},{
+						href: '#',
+						rel: '2',
+						tagcloud: 'isp'
+					},{
+						href: '#',
+						rel: '0.1',
+						tagcloud: 'Apple'
+					},{
+						href: '#',
+						rel: '4',
+						tagcloud: 'united'
+					},{
+						href: '#',
+						rel: '4',
+						tagcloud: 'kingdom'
+					},{
+						href: '#',
+						rel: '0.1',
+						tagcloud: 'amazon'
+					},{
+						href: '#',
+						rel: '0.2',
+						tagcloud: 'metadata'	
+					},{
+						href: '#',
+						rel: '0.1',
+						tagcloud: 'turkey'	
+					},{
+						href: '#',
+						rel: '3',
+						tagcloud: 'vpn'
+					},{
+						href: '#',
+						rel: '0.1',
+						tagcloud: 'tracking'
+					},{
+						href: '#',
+						rel: '0.1',
+						tagcloud: 'broadband'
+					},{
+						href: '#',
+						rel: '0.1',
+						tagcloud: 'privacy'
+					},{
+						href: '#',
+						rel: '2',
+						tagcloud: 'canada'	
+					},{
+						href: '#',
+						rel: '3',
+						tagcloud: 'encryption'
+					},{
+						href: '#',
+						rel: '0.5',
+						tagcloud: 'twitter'
+					},{
+						href: '#',
+						rel: '0.5',
+						tagcloud: 'uk'
+					},{
+						href: '#',
+						rel: '4',
+						tagcloud: 'surveillance'
+					},{
+						href: '#',
+						rel: '4',
+						tagcloud: 'EU'
+					},{
+						href: '#',
+						rel: '4',
+						tagcloud: 'Facebook'
+					},{
+						href: '#',
+						rel: '0.1',
+						tagcloud: 'india'
+					},{
+						href: '#',
+						rel: '0.2',
+						tagcloud: 'freedom of expression'
+					},{
+						href: '#',
+						rel: '1',
+						tagcloud: 'ajit pai bitcoin'
+					},{
+						href: '#',
+						rel: '0.1',
+						tagcloud: 'internet'
+					},{
+						href: '#',
+						rel: '0.1',
+						tagcloud: 'history'
+					},{
+						href: '#',
+						rel: '0.1',
+						tagcloud: 'gdpr'
+					},{
+						href: '#',
+						rel: '0.2',
+						tagcloud: 'microsoft'
+					},{
+						href: '#',
+						rel: '6',
+						tagcloud: 'fcc'
+					},{
+						href: '#',
+						rel: '3',
+						tagcloud: 'censorship'
+					},{
+						href: '#',
+						rel: '1',
+						tagcloud: 'germany'
+					},{
+						href: '#',
+						rel: '0.1',
+						tagcloud: 'file sharing'
+					},{
+						href: '#',
+						rel: '5',
+						tagcloud: 'privacy'
+					},{
+						href: '#',
+						rel: '3',
+						tagcloud: 'copyright'
+					},{
+						href: '#',
+						rel: '0.1',
+						tagcloud: 'anonymity'
+					},{
+						href: '#',
+						rel: '0.1',
+						tagcloud: 'internet of things'
+					},{
+						href: '#',
+						rel: '4',
+						tagcloud: 'google'
+					},{
+						href: '#',
+						rel: '1',
+						tagcloud: 'australia net'
+					},{
+						href: '#',
+						rel: '1',
+						tagcloud: 'neutrality'
+					}
+				])

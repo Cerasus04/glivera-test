@@ -21,6 +21,13 @@ html {
 	letter-spacing: normal;
 	word-wrap: normal;
 	color: $color_text_base;
+
+	@include tablet_width {
+		font-size: 14px;
+	}
+	@include mobile_width {
+		font-size: 12px;	
+	}
 }
 
 body {
@@ -28,11 +35,11 @@ body {
 	height: 100%;
 	background: $body_bg;
 }
-page {
+.page {
 	position: relative;
 	width: 100%;
 	display: grid;
-  grid-template-rows: 1fr min-content 1fr;
+  grid-template-rows: min-content min-content 1fr;
 	margin: 0 auto;	
 	min-height: 100%;
 }

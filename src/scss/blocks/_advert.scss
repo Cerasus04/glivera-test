@@ -1,5 +1,11 @@
-.advert {
-}
 .advert__img {
 	padding-top: 2rem;
+	
+	@include mobile_width {
+		text-align: center;
+	}
+
+	img {
+		@extend %contain_img;
+	}
 }

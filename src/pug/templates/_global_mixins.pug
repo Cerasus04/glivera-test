@@ -7,7 +7,7 @@ mixin head(array)
 	meta(name="format-detection", content="telephone=no")
 
 	link(rel='shortcut icon' href=`${assetsImage}favicon.ico`)
-
+	
 	if environment === 'production'
 		link(rel='icon' sizes='16x16 32x32 64x64' href=`${assetsImage}favicon.ico`)
 		link(rel='icon' type='image/png' sizes='196x196' href='/favicon-192.png')
@@ -34,12 +34,12 @@ mixin head(array)
 mixin form_input(data)
 	- labelClass = data.labelClass || 'form_input__label'
 	- label = data.label
-	- elClass = data.class || 'form_input__element'
-	- blockClass = data.block_class || 'form_input'	
+	- elClass = data.elClass || 'form_input__element'
+	- blockClass = data.blockClass || 'form_input'	
 	- label = data.label
-	- labelText = data.label
+	- labelText = data.labelText
 	- id = data.id
-	- inputType = data.type
+	- inputType = data.inputType
 	- placeholder = data.placeholder || false
 	- value = data.value || false
 	- name = data.name || false
@@ -209,3 +209,8 @@ mixin list(params)
 			- link = item.link
 			li(class= `list__item ${item.active ? `list__item--active_mod` : ''}`)
 				a(href=href class= `list__link`) #{link}
+
+mixin tagcloud(params)
+	.tag_cloud__wrap(id='tagcloud')
+		each item in params
+			a(class="tag_cloud__link" href=item.href rel=item.rel) #{item.tagcloud}

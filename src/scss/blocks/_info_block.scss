@@ -1,5 +1,9 @@
 .info_block {
-	padding-top: 2.6rem;
+	padding-top: 5rem;
+
+	@include mobile_width {
+		width: 45%;
+	}
 }
 .info_block__icon {
 	width: 42px;
@@ -8,6 +12,12 @@
 .info_block__title {
 	@extend %global_flex_block_row_nowrap_flex-start_center; 
 	padding-left: 1rem; 
+
+	@include mobile_width {
+		flex-direction: column;
+		align-items: flex-start;
+		padding-left: 0;
+	}
 }
 .info_block__title_text {
 	@include word-break;	
@@ -27,10 +37,9 @@
 
   &:active {
     opacity: 1;
-  }
+  }  
 
-  @include bp($point_1, min) {
-    //font-size: 2.4rem;
-    //line-height: 3.2rem;
-  }
+	@include mobile_width {
+		padding: 1rem 0 0;
+	}
 }

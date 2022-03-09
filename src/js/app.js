@@ -37,3 +37,17 @@ documentReady(() => {
 pageLoad(() => {
 	loadFunc();
 });
+
+// open tags
+const tagsBtn = document.querySelector('.nav__btn');
+const tagsList = document.querySelector('.nav__tags');
+const closeBtn = document.querySelector('.nav__close');
+
+const openList = () => {
+	tagsList.classList.add('nav__tags--open');
+};
+const closeList = () => {
+	tagsList.classList.remove('nav__tags--open');
+};
+tagsBtn.addEventListener('click', openList);
+closeBtn.addEventListener('click', closeList);

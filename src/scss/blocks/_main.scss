@@ -1,5 +1,11 @@
 .main__wrap {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
+	@extend %global_flex_block_row_nowrap_flex-start;
+	position: relative;
+
+	@include tablet_width {
+	
+	}
+	@include mobile_width {
+		flex-direction: column;
+	}
 }

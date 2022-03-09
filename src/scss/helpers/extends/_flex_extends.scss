@@ -179,7 +179,7 @@
 }
 
 %global_flex_block_column_wrap_flex-end_center {
-	@include flex_block(column, wrap, flex-end, center, center);
+	@include flex_block(column, wrap, flex-end, center);
 }
 
 %global_flex_block_column_wrap_flex-end_stretch {

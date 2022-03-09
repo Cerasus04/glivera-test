@@ -40,6 +40,26 @@
 	}
 }
 
+// Desktop first
+
+@mixin desktop_width {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin tablet_width {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile_width {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
 @mixin triangle($side,$color,$size) {
 	@if $side == left {
 		border: $size solid transparent;
@@ -202,8 +222,4 @@
 	-webkit-line-clamp: 3;
 	overflow: hidden;
 	-webkit-box-orient: vertical;
-}
-@mixin row {
-	display: flex;
-	flex-wrap: wrap;	
 }

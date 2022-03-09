@@ -23,6 +23,16 @@
 
 .section_in {
 	max-width: $page_width;
+	min-width: $min_width;
 	width: 100%;
 	margin: 0 auto;
+	padding: 0 2.5rem;
 }
+
+@include tablet_width {
+	
+}
+@include mobile_width {
+
+}
+

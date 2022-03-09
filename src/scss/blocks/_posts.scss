@@ -1,5 +1,17 @@
 .posts {
-	width: 50rem;
+	-ms-flex-preferred-size: 66.667%;
+	flex-basis: 66.667%;
+	max-width: 66.667%;
+
+	@include tablet_width {
+		-ms-flex-preferred-size: 60%;
+		flex-basis: 55%;
+		max-width: 55%;
+	}
+	@include mobile_width {
+		width: 100%;
+		max-width: 100%;
+	}
 }
 .posts__title {
   font-weight: 300;
@@ -8,17 +20,16 @@
 	letter-spacing: -1px;
 	color: $color-text-base;
 
-  @include bp($point_2, min) {
-    // margin-bottom: 2.5rem;
-  }
-
-  @include bp($point_1, min) {
-    // margin-bottom: 4rem;
-    // font-size: 3.2rem;
-  }
+  @include mobile_width {
+		padding-top: 4.5rem;
+	}
 }
 .posts__list {
 	padding-right: 2.75rem;
+
+	@include mobile_width {
+		padding: 0;
+	}
 }
 .posts__item {
 	padding-top: 2.4rem;

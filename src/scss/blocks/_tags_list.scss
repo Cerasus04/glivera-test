@@ -1,5 +1,6 @@
 .tags_list {
-	@include row;
+	// @include row;
+	@extend %global_flex_block_row_wrap_flex-start;
 	margin-bottom: 0.7rem;
 }
 .tags_list__item {
@@ -8,7 +9,12 @@
 .tags_list__link {
 	font-size: 0.8rem;
 	position: relative;
-	text-transform: uppercase;	
+	text-transform: uppercase;
+
+	&:hover,
+	&:active {
+		color: $color_link_hover;
+	}
 }
 .tags_list__link::after {
 	content: ",";
