@@ -1,6 +1,10 @@
 //------------------------------------------------------------layout
 .header {
-	font-size: 0.87rem;
+	max-width: $page_width;
+	min-width: $min_width;
+	width: 100%;
+	margin: 0 auto;
+	font-size: 0.8rem;
 	will-change: transform;
 	text-transform: uppercase;
 	@include z-index(header);

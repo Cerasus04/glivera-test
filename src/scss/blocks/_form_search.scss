@@ -2,10 +2,8 @@
 	@extend %form_el_default;
 }
 .form_search {
-	position: absolute;
-	top: 0;
-	right: 2.5rem;
-	width: 27%;
+	position: relative;
+	margin-bottom: 2.6rem;
 
 	&::before {
 		content: "";
@@ -18,15 +16,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    cursor: pointer;
-	}
-	@include tablet_width {
-		width: 40%;
-	}
-
-	@include mobile_width {
-		right: unset;
-		left: 2.5rem;
 	}
 }
 .form_search__input[type='search'] {

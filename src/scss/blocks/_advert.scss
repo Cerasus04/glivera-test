@@ -1,11 +1,5 @@
-.advert__img {
-	padding-top: 2rem;
-	
+.advert__img {	
 	@include mobile_width {
 		text-align: center;
-	}
-
-	img {
-		@extend %contain_img;
 	}
 }

@@ -1,5 +1,5 @@
-mixin tags_list(params)
+mixin tags_list(data)
 	ul.tags_list&attributes(attributes)
-		each item in params
+		each item in data
 			li.tags_list__item
-				a.tags_list__link(href=item.href) #{item.link}
+				a.tags_list__link(href=item.href)= item.link

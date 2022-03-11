@@ -1,18 +1,22 @@
 .info_block {
-	padding-top: 5rem;
+	margin-bottom: 2.6rem;
+	border-bottom: 1px solid $color_devider_base;
 
 	@include mobile_width {
-		width: 45%;
+		width: 50%;
+		padding-right: 2.6rem;
 	}
 }
 .info_block__icon {
-	width: 42px;
-	height: 42px;
+	width: 2.6rem;
+	height: 2.6rem;
+	margin-right: 1.8rem;
 }
 .info_block__title {
 	@extend %global_flex_block_row_nowrap_flex-start_center; 
 	padding-left: 1rem; 
-
+	margin-bottom: 2.5rem;
+	
 	@include mobile_width {
 		flex-direction: column;
 		align-items: flex-start;
@@ -21,8 +25,7 @@
 }
 .info_block__title_text {
 	@include word-break;	
-  width: 100%;
-	padding-left: 1.87rem;
+  width: 100%;	
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 300;

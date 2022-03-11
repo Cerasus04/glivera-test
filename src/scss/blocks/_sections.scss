@@ -5,6 +5,7 @@
 	width: 100%;
 
 	font-size: 1rem;
+	padding: 0 2.5rem;
 
 	//remove this demo style
 	&.demo_mod {
@@ -26,13 +27,4 @@
 	min-width: $min_width;
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 2.5rem;
 }
-
-@include tablet_width {
-	
-}
-@include mobile_width {
-
-}
-

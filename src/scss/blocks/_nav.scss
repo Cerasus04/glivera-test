@@ -1,16 +1,15 @@
 .nav {	
 	@extend %global_flex_block_row_nowrap_space_between;
-	padding: 1.5rem 2rem 0;
+	padding: 1.5rem 2rem;
 	background-color: $color_background_base;
 }
 .nav__list {
 	@extend %global_flex_block_row_wrap_flex-start_center;
+	gap: 1.5rem;
 }
 .nav__item {
-	padding-bottom: 1.5rem;
 }
 .nav__item:not(:last-child) {
-	padding-right: 2rem;
 }
 
 .nav__tags {
@@ -31,7 +30,6 @@
 .nav__descr {
 	display: block;
 	margin-right: 2.8rem;
-	padding-bottom: 1.5rem;
 }
 .nav__contact {
 	& .nav__list {

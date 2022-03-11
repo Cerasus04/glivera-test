@@ -29,7 +29,8 @@
 }
 .btn:focus,
 .btn:hover {
-	border: 2px solid $color_text_light;
+	border: 1px solid $color_text_light;
+	color: $color_text_light;
 }
 .btn:active {
 	border: 1px solid $color_text_light;

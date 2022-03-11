@@ -2,23 +2,32 @@
 	@extend %global_flex_block_row_nowrap_flex-start;
 
 	@include tablet_width {
-		flex-direction: column;
-	}
-	@include mobile_width {
-		
+		flex-wrap: wrap;
 	}
 }
 .post__descr {
-	padding-left: 2rem;
-
+	flex-basis: 62%;
+	max-width: 62%;
+	
 	@include tablet_width {
-		padding: 2rem 0;
+		flex-basis: 100%;
+		max-width: 100%;
 	}
 	@include mobile_width {
 	
 	}
 }
 .post__link {
+	display: block;
+	flex-basis: 38%;
+	max-width: 38%;
+	margin-right: 2rem;
+
+	@include tablet_width {
+		margin: 0 auto 1.5rem;
+		flex-basis: 60%;
+		max-width: 60%;
+	}
 	@include mobile_width {
 		align-self: center;	
 	}
@@ -58,10 +67,14 @@
 	border-left: 1px solid $color_text_light;
 	color: $color_text_light;
 }
+.post__count {
+	padding-right: 0.3rem;
+}
 .post__commit {
+	display: flex;
 	color: $color_text_light;
 }
-// .post__icon {
-// 	width: 13px;
-// 	height: 12px;
-// }
+.post__icon {
+	width: 1rem;
+	height: 1rem;
+}

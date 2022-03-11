@@ -6,21 +6,20 @@
 	border-left: 1px solid $color_devider_base;
 
 	@include tablet_width {
-		-ms-flex-preferred-size: 40%;
-		flex-basis: 40%;
-		max-width: 40%;
-		padding-left: 2rem;
+		-ms-flex-preferred-size: 45%;
+		flex-basis: 45%;
+		max-width: 45%;
 	}
 
-	@include mobile_width {
-		
+	@include mobile_width {		
 		width: 100%;
 		max-width: 100%;
-		padding-left: 0;
 		border: none;
+		padding-left: 0;
 	}
 }
 .info__block {
+	
 	@include mobile_width {
 		display: flex;
 		justify-content: space-between;

@@ -2,43 +2,42 @@
 	-ms-flex-preferred-size: 66.667%;
 	flex-basis: 66.667%;
 	max-width: 66.667%;
+	// padding: 0 2.5rem;
 
 	@include tablet_width {
-		-ms-flex-preferred-size: 60%;
+		-ms-flex-preferred-size: 55%;
 		flex-basis: 55%;
 		max-width: 55%;
 	}
 	@include mobile_width {
 		width: 100%;
 		max-width: 100%;
+		margin-bottom: 2.6rem;
 	}
 }
 .posts__title {
+	padding-bottom: 2.4rem;
   font-weight: 300;
   font-size: 2rem;
 	line-height: 2.6rem;
 	letter-spacing: -1px;
 	color: $color-text-base;
-
-  @include mobile_width {
-		padding-top: 4.5rem;
-	}
 }
 .posts__list {
 	padding-right: 2.75rem;
+	margin-bottom: 2rem;
 
 	@include mobile_width {
 		padding: 0;
 	}
 }
 .posts__item {
-	padding-top: 2.4rem;
 	padding-bottom: 2rem;
+	margin-bottom: 2.4rem;
 	border-bottom: 1px solid $color_devider_base;
 }
 .posts__btn {
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	padding-top: 2rem;
+	align-items: center;	
 }

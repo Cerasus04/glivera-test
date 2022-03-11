@@ -1,14 +1,14 @@
-mixin info_block(params)
-	- title = params.title;	
-	- list = params.list;
-	- icon = params.icon;
+mixin info_block(data)
+	- title = data.title;	
+	- list = data.list;
+	- ico = data.ico;
 
 	.info_block
 		.info_block__title
 			.info_block__icon
-				+icon(icon)
-			h3.info_block__title_text #{title}
-		+list(params)
+				+icon(ico)
+			h3.info_block__title_text= title
+		+list(data)
 
 				
 				

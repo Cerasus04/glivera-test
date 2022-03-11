@@ -47,7 +47,7 @@ mixin form_input(data)
 
 	div(class = blockClass)
 		if label
-			label(for=id class=labelClass) #{labelText}
+			label(for=id class=labelClass)= labelText
 		input(type=inputType class = elClass id=id placeholder=placeholder value=value name=name required=required)
 
 mixin form_textarea(data)
@@ -133,9 +133,9 @@ mixin social(socialArray)
 					+icon(item.name_icon, item.mod_icon)
 
 //- works
-mixin icon(params)
-	- name = params.name
-	- mod = params.mod || ''
+mixin icon(data)
+	- name = data.name
+	- mod = data.mod || ''
 	
 	svg(class=`icon icon_${name} ${mod}`)
 		use(xlink:href=`${assetsImage}sprite/sprite.svg#${name}`)
@@ -168,14 +168,22 @@ mixin pagination(config)
 
 //- picture
 mixin picture(data)
-	- typeJpeg = data.typeJpeg ? 'jpeg' : 'jpg'
+	//- - typeJpeg = data.typeJpeg ? 'jpeg' : 'jpg'
+	//- - type = data.png ? 'png' : typeJpeg
+	//- - is2x = data.is2x ? true : false
+	//- - media = data.media
+	//- - imgFit = data.contain ? 'contain_img' : 'cover_img'
+	//- - customClass = data.customClass || imgFit
+	//- - mediaArray = (environment === 'production') ? ['webp', type] : [type];
+
+	- typeJpeg = 'jpg'
 	- type = data.png ? 'png' : typeJpeg
-	- is2x = data.is2x ? true : false
-	- media = data.media
-	- imgFit = data.contain ? 'contain_img' : 'cover_img'
+	- is2x = true
+	- media = false
+	- imgFit = 'contain_img'
 	- customClass = data.customClass || imgFit
 	- mediaArray = (environment === 'production') ? ['webp', type] : [type];
-	picture(class = data.class)
+	picture(class = data.el_class)
 		each imgType in mediaArray
 			if media
 				if imgType === 'webp' && environment === 'production'
@@ -193,24 +201,25 @@ mixin picture(data)
 
 //- ico-svg
 
-mixin ico_svg(params)
-	- icon = params.icon;
-	- size = params.size || 'sm';
-	- theme = params.theme || 'inherit';
+mixin ico_svg(data)
+	- icon = data.icon;
+	- size = data.size || 'sm';
+	- theme = data.theme || 'inherit';
 
 	svg(viewBox='0 0 24 24', class=`ico_svg ico_svg--${size} ico_svg--${theme}`)&attributes(attributes)
 		path(fill='currentColor' d=icon)
 
-mixin list(params)
-	- list_mod = params.list_mod
+mixin list(data)
+	- list_mod = data.list_mod
 	ul(class=`list ${list_mod ? `list--${list_mod}` : ''}`)
-		each item in params.listArr
+		each item in data.listArr
 			- href = item.href || '#'
 			- link = item.link
 			li(class= `list__item ${item.active ? `list__item--active_mod` : ''}`)
-				a(href=href class= `list__link`) #{link}
+				a(href=href class= `list__link`)= link
 
-mixin tagcloud(params)
+mixin tagcloud(data)
 	.tag_cloud__wrap(id='tagcloud')
-		each item in params
-			a(class="tag_cloud__link" href=item.href rel=item.rel) #{item.tagcloud}
+		each item in data
+			- href = item.href || '#'
+			a(class="tag_cloud__link" href=item.href rel=item.rel)= item.tagcloud
