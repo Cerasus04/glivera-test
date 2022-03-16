@@ -2,7 +2,148 @@ extends ../layout/_layout
  
 block vars
 	- array = {body_class:'page', layout_mod:'', sub_keywords:'', title_inner:'Test'}
-
+	- 
+		post_list = [
+			{
+				picture : {
+					img: 'post-1'
+				},
+				title : 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
+				
+				author : 'Derek Zimmer',
+				date : 'JUL 25, 2018',
+				tags : [ 
+					{
+						link: 'Governments', 
+						href: '#'
+					},{
+						link: 'Networking', 
+						href: '#'
+					},{
+						link: 'Open Source',
+						href: '#'
+					},{
+						link: 'Privacy', 
+						href: '#'
+					},{
+						link: 'Security',
+						href: '#'
+					}
+				],
+				commit : '#',
+				count: '0',
+				ico : {name : 'mess', mod : ''}
+			},{
+				picture : {
+					img: 'post-2'
+				},
+				title : 'How to get cheaper flights using a VPN',
+				
+				author : 'Jayson',
+				date : 'JUL 24, 2018',
+				tags : [ 
+					{
+						'link': 'Guides', 
+						'href': '#'
+					}
+				],
+				commit : '#',
+				count: '0',
+				ico: {name : 'mess', mod : ''}	
+			},{
+				picture : {
+					img: 'post-3'
+				},
+				title : 'Net Neutrality was repealed, but the fight is far from over',
+				
+				author : 'Chris Miller',
+				date : 'JUL 22, 2018',
+				tags : [ 
+					{
+						'link': 'Governments', 
+						'href': '#'
+					},{
+						'link': 'Net neutrality', 
+						'href': '#'
+					},{
+						'link': 'New',
+						'href': '#'
+					}
+				],
+				commit : '#',
+				count: '0',
+				ico : {name : 'mess', mod : ''}
+			},{
+				picture : {
+					img: 'post-1'
+				},
+				title : 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
+				
+				author : 'Derek Zimmer',
+				date : 'JUL 25, 2018',
+				tags : [ 
+					{
+						'link': 'Governments', 
+						'href': '#'
+					},{
+						'link': 'Networking', 
+						'href': '#'
+					},{
+						'link': 'Open Source',
+						'href': '#'
+					},{
+						'link': 'Privacy', 
+						'href': '#'
+					},{
+						'link': 'Security',
+						'href': '#'
+					}
+				],
+				commit : '#',
+				count: '0',
+				ico : {name: 'mess', mod : ''}
+			},{
+				picture : {
+					img: 'post-2'
+				},
+				title : 'How to get cheaper flights using a VPN',
+				
+				author : 'Jayson',
+				date : 'JUL 24, 2018',
+				tags : [ 
+					{
+						'link': 'Guides', 
+						'href': '#'
+					}
+				],
+				commit : '#',
+				count: '0',
+				ico : {name : 'mess', mod : ''}
+			},{
+				picture : {
+					img: 'post-3'
+				},
+				title : 'Net Neutrality was repealed, but the fight is far from over',
+				
+				author : 'Chris Miller',
+				date : 'JUL 22, 2018',
+				tags : [ 
+					{
+						'link': 'Governments', 
+						'href': '#'
+					},{
+						'link': 'Net neutrality', 
+						'href': '#'
+					},{
+						'link': 'New',
+						'href': '#'
+					}
+				],
+				commit : '#',
+				count: '0',
+				ico : {name : 'mess', mod : ''}
+			}
+		]
 block content_block
 	h1.visually-hidden Blogs
 	section.section
@@ -10,156 +151,9 @@ block content_block
 			.posts
 				h2.posts__title Recent posts
 				ul.posts__list
-					li.posts__item
-						+post_card({
-							picture : {
-								img: `post-1`
-							},
-							title : 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
-							
-							author : 'Derek Zimmer',
-							date : 'JUL 25, 2018',
-							tags : [ 
-								{
-									link: 'Governments', 
-									href: '#'
-								},{
-									link: 'Networking', 
-									href: '#'
-								},{
-									link: 'Open Source',
-									href: '#'
-								},{
-									link: 'Privacy', 
-									href: '#'
-								},{
-									link: 'Security',
-									href: '#'
-								}
-							],
-							commit : '#',
-							count: '0',
-							ico : {name : 'mess', mod : ''}
-						})
-					li.posts__item
-						+post_card({
-							picture : {
-								img: `post-2`
-							},
-							title : 'How to get cheaper flights using a VPN',
-							
-							author : 'Jayson',
-							date : 'JUL 24, 2018',
-							tags : [ 
-								{
-									'link': 'Guides', 
-									'href': '#'
-								}
-							],
-							commit : '#',
-							count: '0',
-							ico: {name : 'mess', mod : ''}
-						})
-					li.posts__item
-						+post_card({
-							picture : {
-								img: `post-3`
-							},
-							title : 'Net Neutrality was repealed, but the fight is far from over',
-							
-							author : 'Chris Miller',
-							date : 'JUL 22, 2018',
-							tags : [ 
-								{
-									'link': 'Governments', 
-									'href': '#'
-								},{
-									'link': 'Net neutrality', 
-									'href': '#'
-								},{
-									'link': 'New',
-									'href': '#'
-								}
-							],
-							commit : '#',
-							count: '0',
-							ico : {name : 'mess', mod : ''}
-						})
-					li.posts__item
-						+post_card({
-							picture : {
-								img: `post-1`
-							},
-							title : 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
-							
-							author : 'Derek Zimmer',
-							date : 'JUL 25, 2018',
-							tags : [ 
-								{
-									'link': 'Governments', 
-									'href': '#'
-								},{
-									'link': 'Networking', 
-									'href': '#'
-								},{
-									'link': 'Open Source',
-									'href': '#'
-								},{
-									'link': 'Privacy', 
-									'href': '#'
-								},{
-									'link': 'Security',
-									'href': '#'
-								}
-							],
-							commit : '#',
-							count: '0',
-							ico : {name: 'mess', mod : ''}
-						})
-					li.posts__item
-						+post_card({
-							picture : {
-								img: `post-2`
-							},
-							title : 'How to get cheaper flights using a VPN',
-							
-							author : 'Jayson',
-							date : 'JUL 24, 2018',
-							tags : [ 
-								{
-									'link': 'Guides', 
-									'href': '#'
-								}
-							],
-							commit : '#',
-							count: '0',
-							ico : {name : 'mess', mod : ''}
-						})
-					li.posts__item
-						+post_card({
-							picture : {
-								img: `post-3`
-							},
-							title : 'Net Neutrality was repealed, but the fight is far from over',
-							
-							author : 'Chris Miller',
-							date : 'JUL 22, 2018',
-							tags : [ 
-								{
-									'link': 'Governments', 
-									'href': '#'
-								},{
-									'link': 'Net neutrality', 
-									'href': '#'
-								},{
-									'link': 'New',
-									'href': '#'
-								}
-							],
-							commit : '#',
-							count: '0',
-							ico : {name : 'mess', mod : ''}
-						})
+					each item in post_list
+						li.posts__item
+							+post_card(item)
 				.posts__btn
 					+button({
 						'text': 'older posts',

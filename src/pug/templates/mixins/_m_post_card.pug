@@ -9,7 +9,7 @@ mixin post_card(data)
 	- count = data.count; 
 	- ico = data.ico;
 
-	article.post&attributes(attributes)
+	article.post
 		a.post__link(href=href)
 			+picture(picture)
 		.post__descr 
@@ -22,6 +22,3 @@ mixin post_card(data)
 				span.post__count= count
 				span.post__icon
 					+icon(ico)
-				
-				
-
